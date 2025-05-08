@@ -22,10 +22,11 @@ a {
   color: var(--text-color);
 
   span {
-    
+    color: var(--text-color);
   }
 }
 
 /* customer property는 상속개념(부모-자식)이라 자식간에 변수는 받지 못함 */
 h1 {
+  color: var(--text-color);
 }
