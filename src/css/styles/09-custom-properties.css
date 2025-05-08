@@ -1,26 +1,31 @@
 /* CSS 변수 */
+@property --text-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f0c;
+}
+
 :root {
-  /* 사용자 정의 속성 함수, customer property (--로 시작함) */
-  --main-color: rgb(59, 59, 135);
+  /* 사용자 정의 속성, customer property (--로 시작함) */
   --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
 }
 
 body {
   margin: 50px;
   background: #ffc;
   /* Sass(CSS 전처리기)와 다르게 값을 만들고 그 값을 담을 변수에 넣어서 사용해야함 */
-  color: var(--main-color);
 }
 
 a {
-  border: 1px solid var(--main-color);
+  color: var(--text-color);
 
   span {
-    color: var(--red);
+    
   }
 }
 
 /* customer property는 상속개념(부모-자식)이라 자식간에 변수는 받지 못함 */
 h1 {
-  box-shadow: 5px 5px 5px 5px var(--red);
 }
