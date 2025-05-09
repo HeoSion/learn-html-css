@@ -1,4 +1,4 @@
-:root{
+:root {
   /* 웹카페 색상 테마 */
   --white: #fff;
   --black: #181818;
@@ -8,50 +8,48 @@
   --yellow: #ff0;
 
   /* 글자 크기 */
-  --text-13: .8125rem;
-  --text-14: .875rem;
-  --text-15: .9375rem;
-  
+  --text-13: 0.8125rem;
+  --text-14: 0.875rem;
+  --text-15: 0.9375rem;
+
   /* 줄 높이 */
   --leading-base: 1.5;
 
   /* 여백 및 간격 */
-  --spacing-2: .125rem;
-  --spacing-4: .25rem;
-  --spacing-6: .375rem;
-  --spacing-8: .5rem;
-  --spacing-10: .625rem;
-  --spacing-12: .75rem;
+  --spacing-2: 0.125rem;
+  --spacing-4: 0.25rem;
+  --spacing-6: 0.375rem;
+  --spacing-8: 0.5rem;
+  --spacing-10: 0.625rem;
+  --spacing-12: 0.75rem;
 }
 
-
 /* 폼 스타일링 */
-body{
+body {
   margin: 50px;
 }
 
 /* 컴포넌트 컨테이너 */
-.component-wrapper{
-
-  > div{
+.component-wrapper {
+  > div {
     margin-block: 1em;
   }
 }
 
 /* 입력서식 컴포넌트 스타일링 */
-.form-input{
- /* ... */
+.form-input {
+  /* ... */
 }
 
 /* 버튼 컴포넌트 스타일링 */
-.fill-button{
- /* ... */
+.fill-button {
+  /* ... */
 }
-.outline-button{
- /* ... */
+.outline-button {
+  /* ... */
 }
 
 /* 하이퍼링크 컴포넌트 */
-.icon-link{
+.icon-link {
   /* ... */
 }
