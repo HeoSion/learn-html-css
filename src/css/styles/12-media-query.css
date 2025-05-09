@@ -1,0 +1,31 @@
+/* CSS 미디어쿼리 */
+/* 스크린 스타일 */
+body {
+  margin: 50px;
+  color: #fff;
+  background: #000;
+}
+
+/* 320px 이상의 디바이스 - mobile (break point - 유저층 확인, 360 / 768 / 1024 / 2048 등등) */
+@media screen and (min-width: 320px) {
+  body {
+    color: #ffc;
+    background: darkblue;
+  }
+}
+
+/* 768px 이상의 디바이스 - table*/
+@media screen and (min-width: 768px) {
+  body {
+    color: brown;
+    background: pink;
+  }
+}
+
+/* 1280px 이상의 디바이스 - desktop*/
+@media screen and (min-width: 1280px) {
+  body {
+    color: purple;
+    background: lightgreen;
+  }
+}

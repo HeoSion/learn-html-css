@@ -1,0 +1,62 @@
+/* float 컴포넌트 */
+.notification-item {
+  min-width: auto;
+  background: #ffc;
+  display: flow-root;
+  position: relative;
+  min-width: 332px;
+  background: rgb(233, 231, 231);
+  border-radius: 10px;
+
+  img {
+    /* display: inline-block; */
+    width: 28px;
+    height: 28px;
+
+
+    float: left;
+    margin: 28px 20px;
+  }
+
+  .text-box {
+    /* display: inline-block; */
+    margin-top: 20.5px;
+    min-width: 260px;
+    min-height: 43px;
+
+    h3 {
+      font-weight: 800;
+      color: inherit;
+    }
+
+    .main-text {
+      font-size: small;
+      color: #9b9a90;
+      margin-top: 4px;
+    }
+
+    .time {
+      position: absolute;
+      color: inherit;
+      right: 23px;
+      top: 25px;
+
+      font-size: small;
+      font-weight: 800;
+    }
+  }
+}
+
+/* float notification list */
+.container {
+  .notification-item {
+    margin: 8px;
+  }
+
+  li:nth-child(2n-1) .text-box {
+    color: #22be61;
+  }
+  li:nth-child(2n) .text-box {
+    color: #e39042;
+  }
+}
