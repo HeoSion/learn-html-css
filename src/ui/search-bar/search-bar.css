@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
+:root{
+  --green-100: #03CC5C;
+  --green-200: #1BF008;
+  --green-300: #03CCA8;
+
+  --gray-100: #BCC3C7;
+  --gray-200: #9B9A90;
+  --gray-300: #6D7478;
+
+  --start-color: var(--green-200);
+  --end-color: var(--green-300);
+}
+
 body {
   margin: 50px;
 }
@@ -30,32 +43,31 @@ body {
     padding-inline: 0.5em;
     border-radius: 8px;
 
-    &[readonly], &:read-only{
+    &[readonly],
+    &:read-only {
       background: #ccc;
     }
   }
 }
 
 /* 비활성화 버튼 스타일링 */
-button[disabled], button:disabled{
-  cursor:not-allowed;
+button[disabled],
+button:disabled {
+  cursor: not-allowed;
 }
-
 
 /* 상태 디자인 */
 .like-lion {
   padding: 10px;
   border: 1px solid #aaa;
 
-  &:has(input:focus){
+  &:has(input:focus) {
     background: lime;
   }
 
   /* &:focus-within{
     background: yellow;
   } */
-  
-
 
   /* 입력 서식에 마우스 오버 시 */
   input:hover {
@@ -97,7 +109,7 @@ button[disabled], button:disabled{
 .circle-btn {
   --start-color: #1bf008;
   --end-color: #03cca8;
-  --size: 3rem;
+  --size: 1.5rem;
 
   inline-size: var(--size);
   aspect-ratio: 1/1;
@@ -111,7 +123,7 @@ button[disabled], button:disabled{
   align-items: center;
 
   &::before {
-    content: "";
+    content: '';
     inline-size: 30%;
     block-size: 30%;
     background: #fff;
@@ -120,3 +132,50 @@ button[disabled], button:disabled{
 }
 
 /* 검색 바 (폼 스타일링) */
+.search-bar {
+  --border-color: var(--green-100);
+  --shadow-color: var(--gray-100);
+
+  border: 2px solid var(--border-color);
+  padding: .75rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: .75rem;
+  border-radius: 50px;
+
+  &:focus-within{
+    box-shadow: 0 2px 2px 1px var(--shadow-color);
+  }
+
+  a, button {
+    flex-shrink: 0;
+  }
+
+  a {
+    margin-inline-start: .5rem;
+  }
+
+  form {
+    display: contents;
+  }
+
+  .form-input {
+    flex-grow: 1;
+
+    input {
+      border: 0;
+      outline: 0 none;
+      font-weight: 700;
+      appearance: none;
+
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
+    }
+  }
+
+  button {
+    margin-inline-start: .25rem;
+  }
+}
