@@ -1,44 +1,48 @@
-/* 알림 Notification */
-body {
-  margin: 50px;
+@property --point-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #22BE61;
 }
 
-.notification {
-  border: 1px solid #f9fefe;
+body{
+  margin: 50px;
+}
+/* 알림 Notification */
+.notification{
+  --base-color: #9B9A90;
+
+  border: 1px solid var(--base-color, #9B9A90);
   border-radius: .5rem;
   padding: 20px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   column-gap: 20px;
-  box-shadow: 0px 0px 20px 0px rgba(114, 119, 124, 0.20);
   min-inline-size: 260px;
+  color: var(--point-color);
 
-  svg {
+  svg{
     flex-shrink: 0;
   }
 
-  > div {
+  > div{
     flex-grow: 1;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     row-gap: 4px;
 
-
-    strong {
-      color: #22be61;
+    strong{
       font-size: 1.125rem;
     }
 
-    time {
-      color: #22be61;
-      font-size: .6875rem;
+    time{
+      font-size: 11px;
     }
 
-    p {
-      color: #9b9a90;
-      font-size: 0.875rem;
+    p{
+      color: var(--base-color, #9B9A90);
+      font-size: .875rem;
       inline-size: 100%;
     }
   }
