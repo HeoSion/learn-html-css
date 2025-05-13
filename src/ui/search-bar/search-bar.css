@@ -71,8 +71,6 @@ button[disabled], button:disabled{
   }
 }
 
-/* 검색 바 (폼 스타일링) */
-
 .text-logo {
   --start-color: #1bf008;
   --end-color: #03cca8;
@@ -94,3 +92,31 @@ button[disabled], button:disabled{
     color: transparent;
   }
 }
+
+/* 버튼 스타일링 (원형 그라디언트 버튼) */
+.circle-btn {
+  --start-color: #1bf008;
+  --end-color: #03cca8;
+  --size: 3rem;
+
+  inline-size: var(--size);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  background: var(--start-color) linear-gradient(-45deg, var(--end-color), var(--start-color));
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    inline-size: 30%;
+    block-size: 30%;
+    background: #fff;
+    border-radius: inherit;
+  }
+}
+
+/* 검색 바 (폼 스타일링) */
