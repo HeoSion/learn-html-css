@@ -32,6 +32,30 @@
 }
 
 /* 입력서식 */
+.form-input {
+  /* background: yellow; */
+  --size: 32px;
+
+  input {
+    inline-size: 100%;
+    block-size: var(--size);
+    border: 1px solid var(--gray-200);
+    border-radius: 4px;
+    padding: 0.2em 0.5em;
+  }
+
+  input:user-invalid + p {
+    visibility: visible;
+  }
+
+  .error-message {
+    font-size: 12px;
+    color: #f00;
+    margin-block-start: 8px;
+    visibility: hidden;
+  }
+}
+
 /* 체크 박스 */
 .bg-icon {
   input:checked + label {
@@ -100,7 +124,7 @@
 }
 
 /* 스위치 */
-.form-switch{
+.form-switch {
   --accent-color: var(--green-100);
   --size: 1em;
 
@@ -108,9 +132,9 @@
   flex-flow: row nowrap;
   position: relative;
 
-  input{
+  input {
     position: absolute;
-    inset-block-start: 0;     
+    inset-block-start: 0;
     inset-block-end: 0;
     inset-inline-start: 0;
     margin: 0;
@@ -119,19 +143,19 @@
     appearance: none;
   }
 
-  label{
+  label {
     inline-size: calc(var(--size) * 2);
     text-align: right;
     align-content: center;
   }
 
-  input:checked + label::before{
-    content: "on";
+  input:checked + label::before {
+    content: 'on';
     color: var(--accent-color);
   }
 
-  label::before{
-    content: "off";
+  label::before {
+    content: 'off';
     text-transform: uppercase;
     color: var(--gray-200);
     font-weight: 700;
