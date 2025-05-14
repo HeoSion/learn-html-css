@@ -166,6 +166,7 @@ button:disabled {
       outline: 0 none;
       font-weight: 700;
       appearance: none;
+      width: 100%;
 
       &::-webkit-search-cancel-button {
         display: none;
