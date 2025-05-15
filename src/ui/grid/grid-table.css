@@ -6,7 +6,8 @@ body {
 }
 
 .grid-table {
-  border-block: 2px solid #aaa;
+  border-block: 2px solid gray;
+  background: #333;
   margin-block: 1.25rem;
   font-size: 0.875rem;
   min-inline-size: 530px;
@@ -18,7 +19,7 @@ body {
   /* align-items: center; */
 
   dt, dd, > div {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #bababa;
     align-content: center;
   }
 
@@ -26,7 +27,7 @@ body {
     /* align-self: start; */
     margin-block: 10px;
     border-bottom: 0;
-    align-content: start;
+    align
   }
 
   > :is(dd, div):last-child {
