@@ -34,12 +34,18 @@ body {
 
 /* 상품 컴포넌트 */
 .cart-product {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 12px;
+  align-items: center;
+  padding: 5px 8px;
+
 
   figure {
+    flex: 1 1 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    padding: 5px 8px;
     column-gap: 12px;
 
     img {
@@ -58,7 +64,7 @@ body {
       row-gap: 8px;
       letter-spacing: -0.02em;
       line-height: 1;
-      translate: 0 2px;
+      translate: 0 1px;
 
       a {
         font-size: 20px;
@@ -72,11 +78,16 @@ body {
   }
 
   div {
-    background: goldenrod;
+    flex: 0 0 0;
+    background: var(--gray-100);
     border: 1px solid currentColor;
     border-radius: 14px;
+    display: inline-flex;
+    padding: 5px 8px;
+    opacity: 0.5;
 
-    .button-increase, .button-decrease {
+    .button-increase,
+    .button-decrease {
       --button-size: 16px;
 
       inline-size: 16px;
@@ -87,10 +98,11 @@ body {
       place-items: center;
       padding: 0;
       border: 0;
-    }
+      background-color: transparent;
+      ;
 
-    .button-increase, .button-decrease {
-      &::before, &::after {
+      &::before,
+      &:after {
         content: "";
         grid-area: 1 / 1;
         inline-size: 5px;
@@ -107,9 +119,15 @@ body {
       }
     }
 
+    output {
+      padding-inline: 3px 2px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
   }
 }
-
 
 
 /* 장바구니 레이아웃 */
