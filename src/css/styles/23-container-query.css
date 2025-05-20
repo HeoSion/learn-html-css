@@ -20,13 +20,18 @@ body {
     
     @container ( width >= 600px ) {
       flex-direction: row;
+
+      div {
+        font-size: 2em;
+        color: white;
+      }
     }
 
     div {
       block-size: 200px;
       text-align: center;
       align-content: center;
-      font-size: 2em;
+      /* font-size: 2em; */
       font-weight: 700;
     }
 
